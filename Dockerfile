@@ -4,7 +4,8 @@
 FROM node:lts-alpine AS base
 
 RUN apk update; \
-  apk add git;
+  apk add git; \
+  apk add python3;
 WORKDIR /src
 
 # Copy package.json first to benefit from layer caching
